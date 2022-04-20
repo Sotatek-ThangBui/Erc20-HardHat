@@ -21,10 +21,11 @@ module.exports = {
   networks: {
     rinkeby: {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${process.env.api_key}`,
-      accounts: [process.env.rinkeby_private_key],
+      accounts: [process.env.private_key],
     },
     hardhat: {
-      chainId: 1337
+      chainId: 4,
+      accounts:{mnemonic: process.env.mnemonic}
     }
   },
 };
